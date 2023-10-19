@@ -1,31 +1,54 @@
-# Python Template [![CI](https://github.com/nogibjj/IDS706_miniproject2_Mutian/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS706_miniproject2_Mutian/actions/workflows/cicd.yml)
-# Week 2 Mini Project 2 - Pandas Descriptive Statistics Script
+# Week 8 Mini Project 8
 
 ## Goal
-modify and introduce Pandas-based descriptive statistics.
+Rewrite a Python script for data processing in Rust, highlighting the improvements in speed and resource usage.
 
 ## Overview
-This project demonstrates some basic statistical info on the Oscars female dataset with python libraries like pandas,numpy and matplotlib.
-
-My Work:
-1) Add the required package in requirements.txt. <font style="color:#FF00BB"> **pandas 2.1.0** && **matplotlib 3.4.3** && **numpy 1.22.4** </font>
-
-2) Add function "loadDf" in main.py which reads a csv file to a dataframe && "describeData" which loads a dataframe and return a statistical info of that data && "plotData" that plots a scatter fig in which describe the age of each year's Oscar female winners.
-
-4) Add a test function in test_main.py to test the correctness of the function in main.py
+This project demonstrates the efficiency difference between python and rust by caculating some mean values from a stock buy and sell dataset. I compare the time difference, and find that rust is 5500x times faster than python.  
 
 
-## Requirements
-* Python (Version 3.6 or newer)
-* Pandas (Version 2.1.0)
-* Matplotlib (Version 3.4.3)
-* Numpy(Version 1.22.4)
+## Run
+ * For Python:
+    Enter the root directory, and run command `make pyall`
+   
+* For Rust:
+    Enther the `rscopy` directory, and run command `make all`
+
+### Makefile Commands 
+`make install` for rust dependancy setup
+
+`make format` for rust formatting 
+
+`make lint` for rust linting
+
+`make test` for rust testing
+
+`make all` to run all rust commands
+
+`make pyinstall` for python dependancy installation
+
+`make pyformat` for python formatting 
+
+`make pylint` for python linting
+
+`make pytest` for python testing
+
+`make pyall` to run all python commands
+
+## Test
+
+<img width="790" alt="image" src="https://github.com/nogibjj/IDS706_miniproject8_Mutian/assets/108935314/0fcfb127-1f76-4ce5-a920-bd4ed155ef80">
+
 
 ## Output
 
-* Descriptive Statiscs:
-![img](https://github.com/nogibjj/IDS706_miniproject2_Mutian/blob/a3655289b8ae6f6e1bb20690b570ae3be4ccb7e8/data.png)
+rust version:
+
+<img width="877" alt="image" src="https://github.com/nogibjj/IDS706_miniproject8_Mutian/assets/108935314/37f507f5-1e36-414c-92a2-4d0cfb06a90f">
 
 
-* Scatter Plot
-  ![img](https://github.com/nogibjj/IDS706_miniproject2_Mutian/blob/main/scatterfig.png)
+
+python version:
+
+ <img width="761" alt="image" src="https://github.com/nogibjj/IDS706_miniproject8_Mutian/assets/108935314/c387a4b6-5c42-4fc2-91c6-e97d70f75b3a">
+
