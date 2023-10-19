@@ -12,10 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: install packages
-        run: make install
+        run: make pyinstall
       - name: lint
-        run: make lint
+        run: make pylint
       - name: test
-        run: make test
+        run: make pytest
       - name: format
-        run: make format
+        run: make pyformat
