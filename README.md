@@ -15,7 +15,7 @@ This project demonstrates the efficiency difference between python and rust by c
     Enther the `rscopy` directory, and run command `make all`
 
 ### Makefile Commands 
-`make install` for rust dependancy setup
+`make run` for rust running
 
 `make format` for rust formatting 
 
