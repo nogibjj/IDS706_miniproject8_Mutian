@@ -1,25 +1,23 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import polars as pl
+
 def loadDf(path):
-    df = pd.read_csv(path)
-    df.columns = ['Year','Age','Name','Movie','Movie2']
+    df= pl.read_csv(path)
     return df
 
 
 def describeData(df):
-    return df.describe()
+      # Calculate the mean of specific columns
+    average0 = df['timestamp'].mean()
+    average1 = df['buy_vol'].mean()
+    average2 = df['sell_vol'].mean()
+    average3 = df['buy_sell_ratio'].mean()
 
-def plotData(df):
-    
-    plt.figure(figsize=(10,10))
-    x = df['Year']
-    y = df['Age']
-    color= np.array([np.random.randint(0,100) for _ in range(df.shape[0])])
-    plt.scatter(x,y,c=color,cmap='viridis',s=100)
-    plt.xlabel("year")
-    plt.ylabel("age")
-    plt.colorbar()
-    plt.show()
-    plt.savefig("./scatterfig.png")
+    print(
+        f"Average: {average0},{average1},{average2},{average3}"
+    )
+
+
 
