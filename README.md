@@ -1,5 +1,5 @@
 # Week 8 Mini Project 8
-
+[![CI](https://github.com/nogibjj/IDS706_miniproject8_Mutian/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS706_miniproject8_Mutian/actions/workflows/cicd.yml)
 ## Goal
 Rewrite a Python script for data processing in Rust, highlighting the improvements in speed and resource usage.
 
